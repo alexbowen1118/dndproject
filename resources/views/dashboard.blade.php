@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="home-root"></div>
+<div id="dashboard-root"></div>
 
 @endsection
 

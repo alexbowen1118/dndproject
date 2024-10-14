@@ -1,3 +1,3 @@
-if (document.getElementById('home-root')) {
-    import('./loadHome');
+if (document.getElementById('dashboard-root')) {
+    import('./loadDashboard');
 }

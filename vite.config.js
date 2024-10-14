@@ -5,35 +5,12 @@ import * as path from 'path';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
-    build: {
-        outDir: 'public',
-        manifest: true,
-        emptyOutDir: false,
-        copyPublicDir: false,
-        rollupOptions: {
-            input: {
-                app: 'resources/js/app.js',
-                css: 'resources/css/app.css',
-            },
-            output: {
-                entryFileNames: 'assets/js/[name].js',
-                chunkFileNames: 'assets/js/[name]-[hash].js',
-                assetFileNames: (assetInfo) => {
-                    let info = assetInfo.name.split(".");
-                    let extType = info[info.length - 1];
-                    if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-                        extType = "img";
-                    } else if (/woff|woff2|ttf/.test(extType)) {
-                        extType = "fonts";
-                    }
-                    return `assets/${extType}/[name][extname]`;
-                },
-            },
-        },
-    },
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: [
+                'resources/css/app.css',
+                'resources/js/app.js',
+            ],
             refresh: true,
         }),
         svelte(),

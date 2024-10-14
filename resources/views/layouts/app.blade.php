@@ -2,37 +2,26 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ config('app.description', 'DND Project') }}">
-    <meta name="author" content="Alex Bowen">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title')</title>
 
-    <!-- Scripts -->
-    <script type="module" src="{{ asset('assets/js/app.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    @yield('extrajs')
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link href="{{ asset('assets/css/webfonts.css') }}"  rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
-    <link href="{{ asset('assets/css/app.css') }}"  rel="stylesheet">
-    <link href="{{ asset('assets/css/app-sass.css') }}"  rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @yield('extracss')
-
-    @yield('extrahead')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
-    <div class="content">
-        @yield('content')
+<body class="font-sans antialiased">
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-900 flex">
+        @include('layouts.sidebar')
+
+        <div class="flex-1 p-6 ml-16">
+            @if (isset($slot))
+                {{ $slot }}
+            @else
+                @yield('content')
+            @endif
+        </div>
     </div>
-
-    <footer>
-    </footer>
-
-    @stack('scripts')
 </body>
-</html>
