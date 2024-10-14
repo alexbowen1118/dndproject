@@ -1,0 +1,42 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/js/css.js",
+    "name": "css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/js/app.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/bootstrap.js",
+      "resources/js/svelteLoader.js"
+    ]
+  },
+  "resources/js/bootstrap.js": {
+    "file": "assets/js/bootstrap-DNNVfxYP.js",
+    "name": "bootstrap",
+    "src": "resources/js/bootstrap.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/loadHome.js": {
+    "file": "assets/js/loadHome-BDF8gZX4.js",
+    "name": "loadHome",
+    "src": "resources/js/loadHome.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/svelteLoader.js": {
+    "file": "assets/js/svelteLoader-oCGy1Xpl.js",
+    "name": "svelteLoader",
+    "src": "resources/js/svelteLoader.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "dynamicImports": [
+      "resources/js/loadHome.js"
+    ]
+  }
+}
