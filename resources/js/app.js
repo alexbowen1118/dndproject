@@ -6,11 +6,11 @@
 
 import('./bootstrap');
 
-import Alpine from 'alpinejs';
+// import Alpine from 'alpinejs';
 
-window.Alpine = Alpine;
+// window.Alpine = Alpine;
 
-Alpine.start();
+// Alpine.start();
 
 /**
  * Next, load Svelte to the root div from the Blade template.

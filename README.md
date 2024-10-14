@@ -64,3 +64,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+# Ideas
+
+Encounters:
+
+rolling by right clicking an icon and selecting from your attacks or spells
+when a new encounter starts, each player must click a red "Roll your Initiative" button, then the initiative auto sorts when everyone has completed it and the first turn begins
+when in an encounter, a small hp bar is above players?
+when in an encounter, there is a bar at the bottom of the screen for rolling and other things
+
+Maps:
+
+GIF maps
+"draw" a map feature?
+Characters have 'field of vision' for automatic fog of war, collision for map walls could be aquired via AI?
